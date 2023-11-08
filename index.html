@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Scrambler - Ayodele Alayemi</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <header>
+      <h2>Redactr</h2>
+      <nav>
+        <a href="">Clear Text</a>
+      </nav>
+    </header>
+    <main>
+      <form id="redactForm">
+        <label for="original"
+          ><h4>Type your message here:</h4>
+          <textarea
+            type="text"
+            name="original"
+            id="original"
+            rows="4"
+            cols="50"
+            required
+          ></textarea>
+          <span class="error" id="textError"></span>
+        </label>
+        <label for="words">
+          <h4>Indicate word(s) to redact here:</h4>
+          <span class="instruction"
+            >Note: Separate words to redact with a comma if more than one.</span
+          >
+          <input type="text" name="words" id="words" required />
+          <span class="error" id="wordError"></span>
+        </label>
+
+        <label for="choice">
+          <h4>Redact Options:</h4>
+          <select name="choice" id="choice">
+            <option value="####" selected>####</option>
+            <option value="****">****</option>
+            <option value="XXXX">XXXX</option>
+          </select>
+        </label>
+
+        <button type="submit" id="redact" class="btn">Redact Now</button>
+      </form>
+
+      <section>
+        <h3>Redacted Text</h3>
+        <div id="redatedTextContainer"></div>
+      </section>
+    </main>
+    <footer></footer>
+
+    <script src="index.js" defer></script>
+  </body>
+</html>
